@@ -10,6 +10,7 @@ const database = {
     language: 'Spanish',
     email: '',
     address: '#TODO',
+    url: 'https://nbcontreras.github.io/',
     freelanceStatus: 'Not Available',
     socialLinks: {
       facebook: '',
