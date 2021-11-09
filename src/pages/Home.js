@@ -82,8 +82,8 @@ function Home({ lightMode }) {
   return (
     <Layout>
       <Helmet>
-        <title>Home - Personal Portfolio</title>
-        <meta name="description" content="Home - Personal Portfolio" />
+        <title>{`Inicio - ${information.name}`}</title>
+        <meta name="description" content="Inicio - Personal " />
       </Helmet>
       <div className="mi-home-area mi-padding-section">
         <Particles
@@ -95,7 +95,7 @@ function Home({ lightMode }) {
             <div className="col-lg-10 col-12">
               <div className="mi-home-content">
                 <h1>
-                  Hi, I am{' '}
+                  Hola, soy{' '}
                   <span className="color-theme">{information.name}</span>
                 </h1>
                 <p>{information.aboutContent}</p>

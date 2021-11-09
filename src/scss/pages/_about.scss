@@ -7,7 +7,7 @@
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       top: 0;
@@ -17,7 +17,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: auto;
       right: 0;
@@ -29,7 +29,7 @@
     }
 
     img {
-      width: 100%;
+      width: 80%;
     }
 
     &-icon {
@@ -79,13 +79,13 @@
         }
 
         b {
-          min-width: 120px;
+          min-width: 180px;
           display: inline-block;
           position: relative;
           margin-right: 7px;
 
           &:after {
-            content: ":";
+            content: ':';
             position: absolute;
             top: 0;
             left: auto;
@@ -121,7 +121,7 @@
       ul {
         li {
           b {
-            min-width: 90px;
+            min-width: 140px;
           }
         }
       }

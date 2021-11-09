@@ -3,15 +3,17 @@ import Mock from '../mock';
 const database = {
   information: {
     name: 'Nicolás Contreras',
-    aboutContent: '#TODO',
-    age: 24,
+    aboutContent:
+      'Soy Ingeniero Civil en Informática titulado en la Pontificia Universidad Católica de Valparaíso. Me gusta programar y enfrentar nuevos desafío.',
+    age: 25,
     phone: '',
     nationality: 'Chile',
-    language: 'Spanish',
+    language: 'Español',
     email: '',
-    address: '#TODO',
+    address: '',
     url: 'https://nbcontreras.github.io/',
-    freelanceStatus: 'Not Available',
+    freelanceStatus: '',
+    englishlevel: 'Medio',
     socialLinks: {
       facebook: '',
       twitter: '',
@@ -24,26 +26,45 @@ const database = {
     brandImage: '/images/nicolas.jpg',
     aboutImage: '/images/nicolas.jpg',
     aboutImageLg: '/images/nicolas.jpg',
+    githubImage:
+      'https://github-readme-stats.vercel.app/api?username=nbcontreras&show_icons=true&count_private=true&hide_title=true&theme=cobalt',
+    githubImageLg:
+      'https://github-readme-stats.vercel.app/api?username=nbcontreras&show_icons=true&count_private=true&hide_title=true&theme=cobalt',
     cvfile: '/files/empty.pdf',
   },
-  services: [
+  goals: [
     {
-      title: 'Web Design',
-      icon: 'color-pallet',
+      title: 'Inglés',
+      icon: 'library',
       details:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.',
+        'Dentro de mis metas de aprendizaje, se encuentra aprender el idioma inglés. Mi objetivo es poder comunicarme con otras personas y poder establecer de manera fluida un diálogo.',
     },
     {
-      title: 'Web Development',
-      icon: 'code',
+      title: 'React',
+      icon: 'react',
       details:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.',
+        'React es una de las bibliotecas de javascript para Frontend, que encuentro más atractivo de aprender. Es por eso que este sitio utiliza React para ir aprendiendo de a poco como se estructura.',
     },
     {
-      title: 'Mobile Application',
-      icon: 'mobile',
+      title: 'Machine Learning',
+      icon: 'code-alt',
       details:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.',
+        'Fuera del desarrollo web, el machine learning es otra de las áreas que me llama la atención. Si aparece la oportunidad de enfrentar algún desafío en esta área sería interesante tomarlo.',
+    },
+    {
+      title: 'Portugués',
+      icon: 'library',
+      details: '',
+    },
+    {
+      title: 'AWS',
+      icon: 'aws',
+      details: '',
+    },
+    {
+      title: 'Nuevo lenguaje de programación',
+      icon: 'code-alt',
+      details: '',
     },
   ],
   reviews: [
@@ -76,28 +97,44 @@ const database = {
   ],
   skills: [
     {
-      title: 'HTML5',
+      title: 'Django',
+      icon: 'checkmark-circle',
       value: 95,
     },
     {
-      title: 'CSS3',
-      value: 90,
+      title: 'Ionic',
+      icon: 'checkmark-circle',
+      value: 85,
+    },
+    {
+      title: 'Python',
+      icon: 'checkmark-circle',
+      value: 85,
+    },
+    {
+      title: 'PHP',
+      icon: 'checkmark-circle',
+      value: 85,
     },
     {
       title: 'Javascript',
+      icon: 'checkmark-circle',
       value: 70,
     },
     {
       title: 'jQuery',
+      icon: 'checkmark-circle',
       value: 85,
     },
     {
-      title: 'ReactJS',
-      value: 80,
+      title: 'Bootstrap',
+      icon: 'checkmark-circle',
+      value: 85,
     },
     {
-      title: 'Photoshop',
-      value: 65,
+      title: 'SQL',
+      icon: 'checkmark-circle',
+      value: 85,
     },
   ],
   portfolios: [
@@ -287,53 +324,56 @@ const database = {
     workingExperience: [
       {
         id: 1,
-        year: '2018 - Present',
-        position: 'Frontend Web Developer',
-        company: 'Abc Company',
+        year: 'Febrero 2020 - Presente',
+        position: 'Desarrollor de Software',
+        company: 'SASCO SpA',
         details:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+          'Actualmente me encuentro trabajando en SASCO SpA, donde he trabajado en proyectos como bhexpress.cl y contafi.cl. ' +
+          'He utilizado Ionic Framework para agregar nuevas funcionalidades a la aplicación de LibreDTE. (También empecé a usar Linux)',
       },
       {
         id: 2,
-        year: '2016 - 2018',
-        position: 'Frontend Web Developer',
-        company: 'CBA Company',
+        year: 'Marzo 2020 - Diciembre 2020',
+        position: 'Desarrollor Web',
+        company: 'BRASS Chile S.A.',
         details:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+          'Los requerimientos del sistema ERP siguieron creciendo por lo que continué con este desarrollo. (PHP y SQL Server)',
       },
       {
         id: 3,
-        year: '2014 - 1016',
-        position: 'UI/UX Designer',
-        company: 'Example Company',
+        year: 'Enero 2020 - Febrero',
+        position: 'Práctica Profesional',
+        company: 'BRASS Chile S.A.',
         details:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+          'Durante mi segunda práctica, continué con el desarrollo del ERP. Además realicé capacitaciones sobre este sistema y sus nuevas funcionalidades.',
+      },
+      {
+        id: 4,
+        year: 'Abril 2019 - Diciembre 2019',
+        position: 'Desarrollor Web',
+        company: 'BRASS Chile S.A.',
+        details:
+          'Terminada mi práctica se me brindó la oportunidad de seguir trabajando de manera remota (producto a que estudiaba en Valparaíso y la empresa es de Santiago ' +
+          'por lo que no podía estar de manera presencial). ' +
+          'Durante este período estuve trabajando en un sistema ERP el cual permite la gestión de diferentes tareas de la empresa. Para este proyecto utilicé PHP y SQL Server.',
+      },
+      {
+        id: 5,
+        year: 'Enero 2019 - Febrero 2019',
+        position: 'Práctica Profesional',
+        company: 'BRASS Chile S.A.',
+        details:
+          'En mi primera práctica, realicé un sistema de evaluación de desempeño. Para esto tuve que llevar a cabo la captura de requerimientos y su respectivo desarrollo, donde utilice ' +
+          'el Framework Django y SQL Server para la base de datos.',
       },
     ],
     educationExperience: [
       {
         id: 1,
-        year: '2018 - 2019',
-        graduation: 'Master of Science',
-        university: 'Abc University',
-        details:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
-      },
-      {
-        id: 2,
-        year: '2016 - 2018',
-        graduation: 'Bachelor of Science',
-        university: 'Abc University',
-        details:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
-      },
-      {
-        id: 3,
-        year: '2015 - 2016',
-        graduation: 'Higher Schoold Graduation',
-        university: 'Abc College',
-        details:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+        year: '2015 - 2020',
+        graduation: 'Ingeniería Civil en Informática',
+        university: 'Pontificia Universidad Católica de Valparaíso',
+        details: '',
       },
     ],
   },
@@ -488,8 +528,8 @@ Mock.onGet('/api/information').reply((config) => {
   return [200, response];
 });
 
-Mock.onGet('/api/services').reply((config) => {
-  const response = database.services;
+Mock.onGet('/api/goals').reply((config) => {
+  const response = database.goals;
   return [200, response];
 });
 

@@ -1,19 +1,19 @@
-import { Helmet } from "react-helmet";
-import axios from "axios";
-import FsLightbox from "fslightbox-react";
-import React, { useEffect, useState } from "react";
-import * as Icon from "react-feather";
-import ProgressiveImage from "react-progressive-image";
-import Slider from "react-slick";
-import Layout from "../components/Layout";
-import Sectiontitle from "../components/Sectiontitle";
-import Service from "../components/Service";
-import Testimonial from "../components/Testimonial";
+import { Helmet } from 'react-helmet';
+import axios from 'axios';
+import FsLightbox from 'fslightbox-react';
+import React, { useEffect, useState } from 'react';
+import * as Icon from 'react-feather';
+import ProgressiveImage from 'react-progressive-image';
+import Slider from 'react-slick';
+import Layout from '../components/Layout';
+import Sectiontitle from '../components/Sectiontitle';
+import Goals from '../components/Goals';
+import Testimonial from '../components/Testimonial';
 
 function About() {
   const [toggler, setToggler] = useState(false);
-  const [information, setInformation] = useState("");
-  const [services, setServices] = useState([]);
+  const [information, setInformation] = useState('');
+  const [goals, setGoals] = useState([]);
   const [reviews, setReviews] = useState([]);
 
   const sliderSettings = {
@@ -45,13 +45,13 @@ function About() {
   };
 
   useEffect(() => {
-    axios.get("/api/information").then((response) => {
+    axios.get('/api/information').then((response) => {
       setInformation(response.data);
     });
-    axios.get("/api/services").then((response) => {
-      setServices(response.data);
+    axios.get('/api/goals').then((response) => {
+      setGoals(response.data);
     });
-    axios.get("/api/reviews").then((response) => {
+    axios.get('/api/reviews').then((response) => {
       setReviews(response.data);
     });
   }, []);
@@ -59,7 +59,7 @@ function About() {
   return (
     <Layout>
       <Helmet>
-        <title>About - Chester React Personal Portfolio Template</title>
+        <title>{`Sobre - ${information.name}`}</title>
         <meta
           name="description"
           content="Chester React Personal Portfolio Template About Page"
@@ -67,9 +67,9 @@ function About() {
       </Helmet>
       <div className="mi-about-area mi-section mi-padding-top">
         <div className="container">
-          <Sectiontitle title="About Me" />
+          <Sectiontitle title="Sobre mi" />
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-5">
               <div className="mi-about-image">
                 <ProgressiveImage
                   src={information.aboutImage}
@@ -92,50 +92,51 @@ function About() {
                 />
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-7">
               <div className="mi-about-content">
                 <h3>
-                  I am <span className="color-theme">{information.name}</span>
+                  Soy <span className="color-theme">{information.name}</span>
                 </h3>
-                <p>
-                  I am a frontend web developer. I can provide clean code and
-                  pixel perfect design. I also make website more & more
-                  interactive with web animations.
-                </p>
+                <p>{information.aboutContent}</p>
                 <ul>
                   {!information.name ? null : (
                     <li>
-                      <b>Full Name</b> {information.name}
+                      <b>Nombre</b> {information.name}
                     </li>
                   )}
                   {!information.age ? null : (
                     <li>
-                      <b>Age</b> {information.age} Years
+                      <b>Edad</b> {information.age} Años
                     </li>
                   )}
                   {!information.phone ? null : (
                     <li>
-                      <b>Phone</b> {information.phone}
+                      <b>Teléfono</b> {information.phone}
                     </li>
                   )}
                   {!information.nationality ? null : (
                     <li>
-                      <b>Nationality</b> {information.nationality}
+                      <b>Nacionalidad</b> {information.nationality}
                     </li>
                   )}
                   {!information.language ? null : (
                     <li>
-                      <b>Languages</b> {information.language}
+                      <b>Idiomas</b> {information.language}
+                    </li>
+                  )}
+                  {!information.englishlevel ? null : (
+                    <li>
+                      <b>Inglés</b> {information.englishlevel}
                     </li>
                   )}
                   {!information.email ? null : (
                     <li>
-                      <b>Email</b> {information.email}
+                      <b>Correo</b> {information.email}
                     </li>
                   )}
                   {!information.address ? null : (
                     <li>
-                      <b>Address</b> {information.address}
+                      <b>Dirección</b> {information.address}
                     </li>
                   )}
                   {!information.freelanceStatus ? null : (
@@ -143,33 +144,38 @@ function About() {
                       <b>Freelance</b> {information.freelanceStatus}
                     </li>
                   )}
+                  {!information.githubImage ? null : (
+                    <li>
+                      <b>Estadísticas GitHub</b>
+                    </li>
+                  )}
                 </ul>
-                <a href={information.cvfile} className="mi-button">
-                  Download CV
-                </a>
+              </div>
+              <div className="mi-about-content">
+                <img src={information.githubImage} alt="githubImage" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mi-service-area mi-section mi-padding-top">
+      <div className="mi-goal-area mi-section mi-padding-top  mi-padding-bottom">
         <div className="container">
-          <Sectiontitle title="Services" />
-          <div className="mi-service-wrapper">
+          <Sectiontitle title="Metas de Aprendizaje" />
+          <div className="mi-goal-wrapper">
             <div className="row mt-30-reverse">
-              {services.map((service) => (
+              {goals.map((goal) => (
                 <div
                   className="col-lg-4 col-md-6 col-12 mt-30"
-                  key={service.title}
+                  key={goal.title}
                 >
-                  <Service content={service} />
+                  <Goals content={goal} />
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
-      <div className="mi-review-area mi-section mi-padding-top mi-padding-bottom">
+      {/* <div className="mi-review-area mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
           <Sectiontitle title="Reviews" />
           <div className="row justify-content-center">
@@ -182,7 +188,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 }

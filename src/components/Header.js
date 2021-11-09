@@ -36,22 +36,22 @@ function Header() {
         <ul className="mi-header-menu">
           <li>
             <NavLink exact to="/">
-              <span>Home</span>
+              <span>Inicio</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="/about">
-              <span>About</span>
+              <span>Sobre mi</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="/resume">
-              <span>Resume</span>
+              <span>Resumen</span>
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/portfolios">
-              <span>Portfolios</span>
+              <span>Portafolio</span>
             </NavLink>
           </li>
           <li>
@@ -61,9 +61,9 @@ function Header() {
           </li>
           <li>
             <NavLink to="/contact">
-              <span>Contact</span>
+              <span>Contacto</span>
             </NavLink>
-          </li>
+          </li> */}
         </ul>
         <p className="mi-header-copyright">
           &copy; {new Date().getFullYear()}{' '}
