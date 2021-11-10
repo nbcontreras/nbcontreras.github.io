@@ -4,7 +4,7 @@ const database = {
   information: {
     name: 'Nicolás Contreras',
     aboutContent:
-      'Soy Ingeniero Civil en Informática titulado en la Pontificia Universidad Católica de Valparaíso. Me gusta programar y enfrentar nuevos desafíos.',
+      'Ingeniero Civil en Informática titulado en la Pontificia Universidad Católica de Valparaíso. Me gusta programar y enfrentar nuevos desafíos.',
     age: 25,
     phone: '',
     githubName: 'nbcontreras',
