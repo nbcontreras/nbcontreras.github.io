@@ -1,50 +1,42 @@
-import FsLightbox from "fslightbox-react";
-import React, { useState } from "react";
-import * as Icon from "react-feather";
-import ProgressiveImage from 'react-progressive-image';
+import React from 'react';
+import * as Icon from 'react-feather';
+import LineIcon from 'react-lineicons';
 
 function Portfolio(props) {
-  const [toggler, setToggler] = useState(false);
-  const { title, subtitle, imageUrl, largeImageUrl, url } = props.content;
+  const { html_url, description, name, language } = props.content;
 
-  const handleToggler = (value) => {
-    setToggler(value);
-  }
+  const GithubIconSytle = {
+    color: '#55e62d',
+    fontWeight: 'bold',
+    fontSize: '3.2em',
+  };
 
   return (
     <div className="mi-portfolio mi-portfolio-visible">
       <div className="mi-portfolio-image">
-        {/* <img src={imageUrl} alt={title} /> */}
-        <ProgressiveImage
-          src={imageUrl}
-          placeholder="/images/portfolio-image-placeholder.png"
-        >
-          {src => <img src={src} alt={title} />}
-        </ProgressiveImage>
+        <LineIcon name="github-original" style={GithubIconSytle} />
+
         <ul>
-          {!largeImageUrl ? null : <li>
-            <button onClick={() => handleToggler(!toggler)}>
-              <Icon.ZoomIn />
-            </button>
-          </li>}
-          {url ? <li>
-            <a rel="noopener noreferrer" target="_blank" href={url}>
-              <Icon.Link />
-            </a>
-          </li> : null}
+          {html_url ? (
+            <li>
+              <a rel="noopener noreferrer" target="_blank" href={html_url}>
+                <Icon.Link />
+              </a>
+            </li>
+          ) : null}
         </ul>
       </div>
-      {!url ? <h5>{title}</h5> : <h5>
-        <a rel="noopener noreferrer" target="_blank" href={url}>
-          {title}
-        </a>
-      </h5>}
-      {subtitle ? <h6>{subtitle}</h6> : null}
-      {!largeImageUrl ? null : <FsLightbox
-        toggler={toggler}
-        sources={largeImageUrl}
-      />
-      }
+      {description ? <h6>{description}</h6> : null}
+      {!html_url ? (
+        <h6>{name}</h6>
+      ) : (
+        <h6>
+          <a rel="noopener noreferrer" target="_blank" href={html_url}>
+            {name}
+          </a>
+        </h6>
+      )}
+      <small>{language}</small>
     </div>
   );
 }

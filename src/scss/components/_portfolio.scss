@@ -9,13 +9,14 @@
   transition: $transition;
   visibility: hidden;
   opacity: 0;
+  text-align: center;
 
   &-image {
     display: block;
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       left: 15px;
       top: 15px;

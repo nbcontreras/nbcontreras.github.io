@@ -4,39 +4,14 @@ import FsLightbox from 'fslightbox-react';
 import React, { useEffect, useState } from 'react';
 import * as Icon from 'react-feather';
 import ProgressiveImage from 'react-progressive-image';
-import Slider from 'react-slick';
 import Layout from '../components/Layout';
 import Sectiontitle from '../components/Sectiontitle';
 import Goals from '../components/Goals';
-import Testimonial from '../components/Testimonial';
 
 function About() {
   const [toggler, setToggler] = useState(false);
   const [information, setInformation] = useState('');
   const [goals, setGoals] = useState([]);
-  const [reviews, setReviews] = useState([]);
-
-  const sliderSettings = {
-    dots: false,
-    infinite: true,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    pauseOnHover: true,
-    adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   const handleToggler = (event) => {
     setToggler({
@@ -50,9 +25,6 @@ function About() {
     });
     axios.get('/api/goals').then((response) => {
       setGoals(response.data);
-    });
-    axios.get('/api/reviews').then((response) => {
-      setReviews(response.data);
     });
   }, []);
 
@@ -160,7 +132,7 @@ function About() {
       </div>
       <div className="mi-goal-area mi-section mi-padding-top  mi-padding-bottom">
         <div className="container">
-          <Sectiontitle title="Metas de Aprendizaje" />
+          <Sectiontitle title="Metas Personales de Aprendizaje" />
           <div className="mi-goal-wrapper">
             <div className="row mt-30-reverse">
               {goals.map((goal) => (

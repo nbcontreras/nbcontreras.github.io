@@ -49,17 +49,17 @@ function Header() {
               <span>Resumen</span>
             </NavLink>
           </li>
-          {/* <li>
+          <li>
             <NavLink to="/portfolios">
               <span>Portafolio</span>
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/blogs">
               <span>Blogs</span>
             </NavLink>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <NavLink to="/contact">
               <span>Contacto</span>
             </NavLink>

@@ -7,6 +7,7 @@ const database = {
       'Soy Ingeniero Civil en Informática titulado en la Pontificia Universidad Católica de Valparaíso. Me gusta programar y enfrentar nuevos desafío.',
     age: 25,
     phone: '',
+    githubName: 'nbcontreras',
     nationality: 'Chile',
     language: 'Español',
     email: '',

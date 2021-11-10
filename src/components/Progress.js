@@ -2,29 +2,11 @@ import React from 'react';
 import LineIcon from 'react-lineicons';
 
 function Progress(props) {
-  const winWidth = window.innerWidth;
   const lineIconSytle = {
     color: '#55e62d',
-    'font-weight': 'bold',
+    fontWeight: 'bold',
   };
-  const progressQuery = () => {
-    if (winWidth && winWidth > 767) {
-      return (
-        <span
-          className="mi-progress-active"
-          style={
-            props.isVisible ? { width: `${props.percentage}%` } : { width: 0 }
-          }
-        ></span>
-      );
-    }
-    return (
-      <span
-        className="mi-progress-active"
-        style={{ width: `${props.percentage}%` }}
-      ></span>
-    );
-  };
+
   return (
     <div className="mi-progress">
       <h6 className="mi-progress-title">
