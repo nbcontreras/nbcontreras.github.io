@@ -28,7 +28,7 @@ const database = {
     aboutImage: '/images/nicolas.jpg',
     aboutImageLg: '/images/nicolas.jpg',
     githubImage:
-      'https://github-readme-stats.vercel.app/api?username=nbcontreras&show_icons=true&count_private=true&hide_title=true&theme=cobalt',
+      'https://github-readme-stats.vercel.app/api?username=nbcontreras&show_icons=true&count_private=false&hide_title=true&theme=cobalt',
     githubImageLg:
       'https://github-readme-stats.vercel.app/api?username=nbcontreras&show_icons=true&count_private=true&hide_title=true&theme=cobalt',
     cvfile: '/files/empty.pdf',
@@ -325,20 +325,22 @@ const database = {
     workingExperience: [
       {
         id: 1,
-        year: 'Febrero 2020 - Presente',
-        position: 'Desarrollor de Software',
-        company: 'SASCO SpA',
+        year: 'Enero 2019 - Febrero 2019',
+        position: 'Práctica Profesional',
+        company: 'BRASS Chile S.A.',
         details:
-          'Actualmente me encuentro trabajando en SASCO SpA, donde he trabajado en proyectos como bhexpress.cl y contafi.cl. ' +
-          'He utilizado Ionic Framework para agregar nuevas funcionalidades a la aplicación de LibreDTE. (También empecé a usar Linux)',
+          'En mi primera práctica, realicé un sistema de evaluación de desempeño. Para esto tuve que llevar a cabo la captura de requerimientos y su respectivo desarrollo, donde utilice ' +
+          'el Framework Django y SQL Server para la base de datos.',
       },
       {
         id: 2,
-        year: 'Marzo 2020 - Diciembre 2020',
+        year: 'Abril 2019 - Diciembre 2019',
         position: 'Desarrollor Web',
         company: 'BRASS Chile S.A.',
         details:
-          'Los requerimientos del sistema ERP siguieron creciendo por lo que continué con este desarrollo. (PHP y SQL Server)',
+          'Terminada mi práctica se me brindó la oportunidad de seguir trabajando de manera remota (producto a que estudiaba en Valparaíso y la empresa es de Santiago ' +
+          'por lo que no podía estar de manera presencial). ' +
+          'Durante este período estuve trabajando en un sistema ERP el cual permite la gestión de diferentes tareas de la empresa. Para este proyecto utilicé PHP y SQL Server.',
       },
       {
         id: 3,
@@ -350,22 +352,20 @@ const database = {
       },
       {
         id: 4,
-        year: 'Abril 2019 - Diciembre 2019',
+        year: 'Marzo 2020 - Diciembre 2020',
         position: 'Desarrollor Web',
         company: 'BRASS Chile S.A.',
         details:
-          'Terminada mi práctica se me brindó la oportunidad de seguir trabajando de manera remota (producto a que estudiaba en Valparaíso y la empresa es de Santiago ' +
-          'por lo que no podía estar de manera presencial). ' +
-          'Durante este período estuve trabajando en un sistema ERP el cual permite la gestión de diferentes tareas de la empresa. Para este proyecto utilicé PHP y SQL Server.',
+          'Nuevamente tuve la oportunidad de seguir en la empresa, donde continúe con el desarrollo del sistema ERP, ya que la cantidad de requerimientos siguió creciendo. (PHP y SQL Server)',
       },
       {
         id: 5,
-        year: 'Enero 2019 - Febrero 2019',
-        position: 'Práctica Profesional',
-        company: 'BRASS Chile S.A.',
+        year: 'Febrero 2020 - Presente',
+        position: 'Desarrollor de Software',
+        company: 'SASCO SpA',
         details:
-          'En mi primera práctica, realicé un sistema de evaluación de desempeño. Para esto tuve que llevar a cabo la captura de requerimientos y su respectivo desarrollo, donde utilice ' +
-          'el Framework Django y SQL Server para la base de datos.',
+          'Actualmente me encuentro trabajando en SASCO SpA, donde he trabajado en proyectos como bhexpress.cl y contafi.cl. ' +
+          'He utilizado Ionic Framework para agregar nuevas funcionalidades a la aplicación de LibreDTE. (También empecé a usar Linux)',
       },
     ],
     educationExperience: [
