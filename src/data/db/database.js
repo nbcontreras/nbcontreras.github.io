@@ -356,7 +356,7 @@ const database = {
         position: 'Desarrollor Web',
         company: 'BRASS Chile S.A.',
         details:
-          'Nuevamente tuve la oportunidad de seguir en la empresa, donde continúe con el desarrollo del sistema ERP, ya que la cantidad de requerimientos siguió creciendo. (PHP y SQL Server)',
+          'Nuevamente tuve la oportunidad de seguir en la empresa, donde continué con el desarrollo del sistema ERP, ya que la cantidad de requerimientos siguió creciendo. (PHP y SQL Server)',
       },
       {
         id: 5,
