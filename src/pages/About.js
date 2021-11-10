@@ -32,10 +32,7 @@ function About() {
     <Layout>
       <Helmet>
         <title>{`Sobre - ${information.name}`}</title>
-        <meta
-          name="description"
-          content="Chester React Personal Portfolio Template About Page"
-        />
+        <meta name="description" content={`Sobre - ${information.name}`} />
       </Helmet>
       <div className="mi-about-area mi-section mi-padding-top">
         <div className="container">

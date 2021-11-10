@@ -1,17 +1,14 @@
-import { Helmet } from "react-helmet";
-import React from "react";
-import { Link } from "react-router-dom";
-import Layout from "../components/Layout";
+import { Helmet } from 'react-helmet';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Layout from '../components/Layout';
 
 function Notfound() {
   return (
     <Layout>
       <Helmet>
         <title>404 - Chester React Personal Portfolio Template</title>
-        <meta
-          name="description"
-          content="Chester React Personal Portfolio Template Not Found Page"
-        />
+        <meta name="description" content="Página no encontrada" />
       </Helmet>
       <div className="mi-about-area mi-section">
         <div className="container">
