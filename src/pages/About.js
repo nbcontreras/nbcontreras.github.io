@@ -11,6 +11,7 @@ import Goals from '../components/Goals';
 function About() {
   const [toggler, setToggler] = useState(false);
   const [information, setInformation] = useState('');
+  const [workStatus, setWorkStatus] = useState('');
   const [goals, setGoals] = useState([]);
 
   const handleToggler = (event) => {
@@ -22,6 +23,7 @@ function About() {
   useEffect(() => {
     axios.get('/api/information').then((response) => {
       setInformation(response.data);
+      setWorkStatus(response.data.workStatus);
     });
     axios.get('/api/goals').then((response) => {
       setGoals(response.data);
@@ -108,9 +110,17 @@ function About() {
                       <b>Dirección</b> {information.address}
                     </li>
                   )}
-                  {!information.freelanceStatus ? null : (
+                  {!workStatus ? null : (
                     <li>
-                      <b>Freelance</b> {information.freelanceStatus}
+                      <b>Cargo Actual</b> {` ${workStatus.content} `}
+                      <span>&nbsp;</span>
+                      <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href={workStatus.url}
+                      >
+                        {workStatus.name}
+                      </a>
                     </li>
                   )}
                   {!information.githubImage ? null : (

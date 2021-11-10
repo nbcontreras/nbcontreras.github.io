@@ -13,7 +13,11 @@ const database = {
     email: '',
     address: '',
     url: 'https://nbcontreras.github.io/',
-    freelanceStatus: '',
+    workStatus: {
+      content: 'Desarrollador de Software en',
+      url: 'https://sasco.cl/',
+      name: 'SASCO SpA',
+    },
     englishlevel: 'Medio',
     socialLinks: {
       facebook: '',
@@ -30,7 +34,7 @@ const database = {
     githubImage:
       'https://github-readme-stats.vercel.app/api?username=nbcontreras&show_icons=true&count_private=false&hide_title=true&theme=cobalt',
     githubImageLg:
-      'https://github-readme-stats.vercel.app/api?username=nbcontreras&show_icons=true&count_private=true&hide_title=true&theme=cobalt',
+      'https://github-readme-stats.vercel.app/api?username=nbcontreras&show_icons=true&count_private=false&hide_title=true&theme=cobalt',
     cvfile: '/files/empty.pdf',
   },
   goals: [
