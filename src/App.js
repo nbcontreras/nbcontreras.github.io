@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as Icon from 'react-feather';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch, MemoryRouter } from 'react-router-dom';
 import './App.scss';
 import About from './pages/About';
 import BlogDetails from './pages/BlogDetails';
@@ -29,7 +29,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       <div className="light-mode">
         <span className="icon">
           <Icon.Sun />
@@ -53,7 +53,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="*" component={Notfound} />
       </Switch>
-    </BrowserRouter>
+    </MemoryRouter>
   );
 }
 
